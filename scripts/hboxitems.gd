@@ -1,4 +1,3 @@
-tool
 extends HBoxContainer
 
 # class member variables go here, for example:
@@ -31,7 +30,8 @@ func _process(delta):
 		var scene = data.gamesuccess_scene.instance()
 		var ui_node = get_node("/root/UI/")
 		ui_node.add_child(scene)
-	update()
+	var scrollnode = get_node("/root/UI/margin/vboxmain/scrollitems")
+	scrollnode.propagate_notification(NOTIFICATION_RESIZED)
 
 func _input(event):
 	if Input.is_action_just_released("reload"):

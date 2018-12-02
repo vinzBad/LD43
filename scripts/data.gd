@@ -1,4 +1,3 @@
-tool
 extends Node
 
 # class member variables go here, for example:

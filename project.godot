@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="New Game Project"
+config/name="LD43: Urgent Sacrifices"
 run/main_scene="res://UI.tscn"
 config/icon="res://icon.png"
 

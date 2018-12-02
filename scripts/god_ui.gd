@@ -1,8 +1,9 @@
-tool
 extends MarginContainer
 
 export (String) var god_name = "Godname"
-export (Texture) var god_texture
+export (Texture) var god_texture_angry
+export (Texture) var god_texture_content
+export (Texture) var god_texture_happy
 
 export (String) var wrath_message = "You didn't manage to please %s. In his anger he brings down his hordes of doom and enslaves humanity" % [god_name]
 
@@ -12,8 +13,8 @@ export (int) var max_mood = 6
 onready var data = get_node("/root/data")
 
 func _ready():
-	if god_texture != null:
-		$CenterContainer/VBoxContainer/TextureRect.texture = god_texture
+	if god_texture_angry != null:
+		$CenterContainer/VBoxContainer/TextureRect.texture = god_texture_angry
 	$CenterContainer/VBoxContainer/Label.text = god_name
 
 func _process(delta):
@@ -42,4 +43,11 @@ func _on_Button_pressed():
 		if current_mood < 0:
 			text.add_text("\n%s" % [wrath_message])
 			gameover()
+		if current_mood >= max_mood:
+			current_mood = max_mood
+			$CenterContainer/VBoxContainer/TextureRect.texture = god_texture_happy
+		elif current_mood > 0:
+			$CenterContainer/VBoxContainer/TextureRect.texture = god_texture_content
+		elif current_mood == 0:
+			$CenterContainer/VBoxContainer/TextureRect.texture = god_texture_angry
 		

@@ -1,5 +1,3 @@
-tool
-
 extends MarginContainer
 
 export (String) var item_name = "Generic Item"
@@ -20,7 +18,7 @@ func _ready():
 	add_to_group("items")
 	
 	if item_texture != null:
-		$panel/hbox/texture.texture = item_texture
+		$panel/hbox/center/texture.texture = item_texture
 	$panel/hbox/vbox/Name.text = item_name
 	$panel/hbox/vbox/Description.text = item_description
 	

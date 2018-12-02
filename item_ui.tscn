@@ -6,7 +6,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 40
+size = 35
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 3 )
@@ -35,6 +35,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_constants/margin_left = 0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Focus", "Mouse", "Rect", "Size Flags", "Visibility", "custom_constants" ]
 item_name = "Generic Item"
@@ -47,8 +48,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 285.0
+margin_right = 237.0
 margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -66,7 +66,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 270.0
+margin_right = 230.0
 margin_bottom = 73.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -76,15 +76,32 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="texture" type="TextureRect" parent="panel/hbox" index="0"]
+[node name="center" type="CenterContainer" parent="panel/hbox" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 64.0
+margin_right = 48.0
 margin_bottom = 66.0
-rect_min_size = Vector2( 64, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="texture" type="TextureRect" parent="panel/hbox/center" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 9.0
+margin_right = 48.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 48, 48 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -102,8 +119,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 68.0
-margin_right = 263.0
+margin_left = 52.0
+margin_right = 223.0
 margin_bottom = 66.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -119,8 +136,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 195.0
-margin_bottom = 41.0
+margin_right = 171.0
+margin_bottom = 36.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -140,9 +157,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 45.0
-margin_right = 195.0
-margin_bottom = 66.0
+margin_top = 40.0
+margin_right = 171.0
+margin_bottom = 61.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

@@ -1,11 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/tenderness.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://god_ui.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/banana.png" type="Texture" id=3]
-[ext_resource path="res://scripts/hboxitems.gd" type="Script" id=4]
-[ext_resource path="res://assets/Seshat.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://scripts/text.gd" type="Script" id=6]
+[ext_resource path="res://assets/Rhogorr_angry.png" type="Texture" id=3]
+[ext_resource path="res://assets/Rhogorr_content.png" type="Texture" id=4]
+[ext_resource path="res://assets/Rhogorr_happy.png" type="Texture" id=5]
+[ext_resource path="res://assets/Nelia_angry.png" type="Texture" id=6]
+[ext_resource path="res://assets/Nelia_content.png" type="Texture" id=7]
+[ext_resource path="res://assets/Nelia_happy.png" type="Texture" id=8]
+[ext_resource path="res://assets/Anias_angry.png" type="Texture" id=9]
+[ext_resource path="res://assets/Anias_content.png" type="Texture" id=10]
+[ext_resource path="res://assets/Anias_happy.png" type="Texture" id=11]
+[ext_resource path="res://scripts/hboxitems.gd" type="Script" id=12]
+[ext_resource path="res://assets/Seshat.otf" type="DynamicFontData" id=13]
+[ext_resource path="res://scripts/text.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -20,10 +28,10 @@ _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 size = 22
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 5 )
+font_data = ExtResource( 13 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
 
-[node name="UI" type="Control"]
+[node name="UI" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -99,7 +107,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 77.0
 margin_right = 960.0
-margin_bottom = 328.0
+margin_bottom = 396.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -112,34 +120,37 @@ alignment = 1
 
 margin_left = 0.0
 margin_right = 317.0
-margin_bottom = 251.0
+margin_bottom = 319.0
 god_name = "Rhogorr"
-god_texture = ExtResource( 3 )
-wrath_message = "You didn't manage to please Godname. In his anger he brings down his hordes of doom and enslaves humanity"
-current_mood = 0
-max_mood = 6
+god_texture_angry = ExtResource( 3 )
+god_texture_content = ExtResource( 4 )
+god_texture_happy = ExtResource( 5 )
+wrath_message = "Rhogorr is furious and unleashes his hordes of doom."
+max_mood = 2
 
 [node name="Nelia" parent="margin/vboxmain/hboxgods" index="1" instance=ExtResource( 2 )]
 
 margin_left = 321.0
 margin_right = 638.0
-margin_bottom = 251.0
+margin_bottom = 319.0
 god_name = "Nelia"
-god_texture = ExtResource( 3 )
-wrath_message = "You didn't manage to please Godname. In his anger he brings down his hordes of doom and enslaves humanity"
-current_mood = 0
-max_mood = 6
+god_texture_angry = ExtResource( 6 )
+god_texture_content = ExtResource( 7 )
+god_texture_happy = ExtResource( 8 )
+wrath_message = "Nelia is very disappointed and removes all of the earths wildlife because we dont earn such beauty."
+max_mood = 2
 
 [node name="Anias" parent="margin/vboxmain/hboxgods" index="2" instance=ExtResource( 2 )]
 
 margin_left = 642.0
 margin_right = 960.0
-margin_bottom = 251.0
+margin_bottom = 319.0
 god_name = "Anias"
-god_texture = ExtResource( 3 )
-wrath_message = "You didn't manage to please Godname. In his anger he brings down his hordes of doom and enslaves humanity"
-current_mood = 0
-max_mood = 6
+god_texture_angry = ExtResource( 9 )
+god_texture_content = ExtResource( 10 )
+god_texture_happy = ExtResource( 11 )
+wrath_message = "Anias infects half of the world population with a zombie virus, because we didn't unterstand his needs."
+max_mood = 2
 
 [node name="scrollitems" type="ScrollContainer" parent="margin/vboxmain" index="2"]
 
@@ -147,9 +158,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 332.0
+margin_top = 400.0
 margin_right = 960.0
-margin_bottom = 332.0
+margin_bottom = 400.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 1
@@ -176,7 +187,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 1
-script = ExtResource( 4 )
+script = ExtResource( 12 )
 _sections_unfolded = [ "Anchor", "Mouse" ]
 
 [node name="paneltext" type="PanelContainer" parent="margin/vboxmain" index="3"]
@@ -185,7 +196,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 336.0
+margin_top = 404.0
 margin_right = 960.0
 margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -205,7 +216,7 @@ anchor_bottom = 0.0
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 953.0
-margin_bottom = 257.0
+margin_bottom = 189.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -215,20 +226,18 @@ size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "The last temple guardian was lazy and didn't offer the gods any sacrifices. Now the gods are angry! Sacrifice the right items before THEY bring their wrath upon us!
-
 "
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "The last temple guardian was lazy and didn't offer the gods any sacrifices. Now the gods are angry! Sacrifice the right items before THEY bring their wrath upon us!
-
 "
 scroll_active = true
 scroll_following = true
 selection_enabled = false
 override_selected_font_color = false
-script = ExtResource( 6 )
+script = ExtResource( 14 )
 _sections_unfolded = [ "Anchor", "BBCode", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts" ]
 
 
