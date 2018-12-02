@@ -31,6 +31,7 @@ func _process(delta):
 		var scene = data.gamesuccess_scene.instance()
 		var ui_node = get_node("/root/UI/")
 		ui_node.add_child(scene)
+	update()
 
 func _input(event):
 	if Input.is_action_just_released("reload"):

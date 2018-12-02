@@ -20,7 +20,7 @@ use_filter = true
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="offer_ui" type="MarginContainer" index="0"]
+[node name="offer_ui" type="MarginContainer"]
 
 self_modulate = Color( 0.0895614, 0.109375, 0.0187988, 1 )
 anchor_left = 0.0
