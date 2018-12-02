@@ -64,7 +64,7 @@
         "name": "Incense Sticks",
         "descr": "Vanilla-scented incense sticks",
         "reactions": {
-            "Anias": [-1, "Oh that is an interesting specimen."],
+            "Anias": [-1, "I'm not an esoteric god."],
             "Rhogorr": [1, "I love the smell of vanilla in the evening"],
             "Nelia": [-1, "I hate burning things."]
         }
