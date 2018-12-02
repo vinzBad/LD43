@@ -1,0 +1,53 @@
+{
+    "banana": {
+        "img": "banana.png",
+        "name": "Banana",
+        "descr": "A tasty banana.",
+        "reactions": {
+            "Anias": [-1, "I already studied this object."],
+            "Rhogorr": [-1, "This is food for my food."],
+            "Nelia": [1, "Thanks."]
+        }
+    },
+    "old_goat": {
+        "img": "old_goat.png",
+        "name": "Old goat",
+        "descr": "An old goat mother.",
+        "reactions": {
+            "Anias": [-1, "Do you want to insult me?"],
+            "Rhogorr": [-1, "How dare you! I only eat fresh meat."],
+            "Nelia": [1, "A new addition to my heavenly zoo."]
+        }
+    },
+    "young_goat": {
+        "img": "old_goat.png",
+        "name": "Young Goat",
+        "descr": "A sweet goat baby.",
+        "reactions": {
+            "Anias": [-1, "Do you want to insult me?"],
+            "Rhogorr": [1, "Mmmh tasty goat meat."],
+            "Nelia": [1, "A new addition to my heavenly zoo."]
+        }
+    },
+    "science_book": {
+        "img": "banana.png",
+        "name": "Science Book",
+        "descr": "A book about quantum physics.",
+        "reactions": {
+            "Anias": [1, "Oh that is interesting"],
+            "Rhogorr": [-1, "I will kill you! You know I can't read."],
+            "Nelia": [-1, "I don't dabble in such worldly topics."]
+        }
+    },
+    "sword": {
+        "img": "banana.png",
+        "name": "Ceremonial Sword",
+        "descr": "An impressive sword.",
+        "reactions": {
+            "Anias": [-1, "Why should I care?"],
+            "Rhogorr": [1, "This will fit right in my collection."],
+            "Nelia": [-1, "Swords are responsible for so much suffering. How dare you offer me something like this!"]
+        }
+    }
+
+}
