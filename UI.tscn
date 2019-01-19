@@ -226,12 +226,16 @@ size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "The last temple guardian was lazy and didn't offer the gods any sacrifices. Now the gods are angry! Sacrifice the right items before THEY bring their wrath upon us!
+
+~ Graphics by [url=http://noxmoon.de/]noxmoon.de[/url] ~
 "
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "The last temple guardian was lazy and didn't offer the gods any sacrifices. Now the gods are angry! Sacrifice the right items before THEY bring their wrath upon us!
+
+~ Graphics by noxmoon.de ~
 "
 scroll_active = true
 scroll_following = true
